@@ -1,0 +1,11 @@
+runtime: php55
+api_version: 1
+ 
+handlers:
+- url: /(.+\.(gif|png|jpg))$
+  static_files: \1
+  upload: .+\.(gif|png|jpg)$
+  application_readable: true
+ 
+- url: /.*
+  script: test2.php
